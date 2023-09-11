@@ -1,0 +1,23 @@
+{
+    "name": "pro.db-plus",
+    "version": "4.2.1",
+    "description": "a simple and easy database package make your life easy.",
+    "main": "index.js",
+    "scripts": {
+        "test": "echo \"Error: no test specified\" && exit 1"
+    },
+    "keywords": [
+        "db",
+        "database",
+        "json",
+        "sql",
+        "sqlite",
+        "",
+        "m7md"
+    ],
+    "author": "M7mD",
+    "license": "CC BY-NC-ND 4.0",
+    "dependencies": {
+        "cryptr": "^6.3.0"
+    }
+}
