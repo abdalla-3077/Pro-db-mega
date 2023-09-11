@@ -48,7 +48,7 @@ await db.all();// to get all data in database.
 await db.backup("Filename");// to make a backup file.
 await db.reset();// to delete all data and database.
 
-
+generateSecretKey() //Gives you a new random secret key
 
 ```
 ## Contact
