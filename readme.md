@@ -1,12 +1,12 @@
 <div  align="center">
 <p>
 <img style="margin-bottom:-6px" src="https://i.ibb.co/gttdg4C/68747470733a2f2f6d656469612e646973636f72646170702e6e65742f6174746163686d656e74732f393135393539393731.png"/>
-<a href="https://www.npmjs.com/package/pro.db-plus/" alt="pro.db-fork" /></a>
+<a href="https://www.npmjs.com/package/pro.db-mega/" alt="pro.db-fork" /></a>
 </p>
 </p>
 </div>
 
-## What is pro.db-plus ?
+## What is pro.db-mega ?
 - It is a easy and quick storage unit that relies on `objects` to store data in **JSON** format
 - BTW THIS IS A FORK ( NOT REAL VERSION ) check it out here [https://www.npmjs.com/package/pro.db/]
 - Encrypt-Decrypt data set with SecretKey you can generate SecretKey from [https://generate-random.org/api-token-generator?count=1&length=64&type=mixed-numbers-symbols]
@@ -14,8 +14,8 @@
 ## Installation
 - You need to install the package on your project
 ```sh-session
-npm install pro.db-plus
-yarn add pro.db-plus
+npm install pro.db-mega
+yarn add pro.db-mega
 ```
 ## Important Alert ⚠
 
@@ -23,7 +23,7 @@ yarn add pro.db-plus
 
 ## How To Use
 ```js
-const {DB} = require('pro.db-plus');
+const {DB} = require('pro.db-mega');
 
 const db = new DB({fileName: `database.json`})
 
@@ -53,4 +53,4 @@ await db.reset();// to delete all data and database.
 ```
 ## Contact
 
-- Contact With Me Discord : [`.__.abdalla`](https://www.npmjs.com/package/pro.db-plus)
+- Contact With Me Discord : [`.__.abdalla`](https://www.npmjs.com/package/pro.db-mega)

@@ -1,6 +1,6 @@
 {
-    "name": "pro.db-plus",
-    "version": "4.2.1",
+    "name": "pro.db-mega",
+    "version": "1.0.0",
     "description": "a simple and easy database package make your life easy.",
     "main": "index.js",
     "scripts": {
@@ -11,13 +11,14 @@
         "database",
         "json",
         "sql",
-        "sqlite",
-        "",
-        "m7md"
+        "sqlite"
     ],
     "author": "M7mD",
     "license": "CC BY-NC-ND 4.0",
     "dependencies": {
         "cryptr": "^6.3.0"
-    }
+    }  ,"repository": {
+        "type": "git",
+        "url": "https://github.com/abdalla-3077/Pro-db-plus"
+      }
 }
