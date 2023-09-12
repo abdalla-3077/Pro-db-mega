@@ -1,6 +1,15 @@
 const fs = require('fs')
 let fileName
 const Cryptr = require('cryptr');
+const mongoose = require('mongoose');
+const { bold } = require('chalk');
+
+const MyModel = mongoose.model('pro-db-plus', {
+    data: String,
+    value: String,
+    createdAt: Date,
+  });
+
 class Data {
     /**
      * 
@@ -335,5 +344,68 @@ class Data {
         return token;
       }
 
+       connect(db, options = []) {
+        if (!db) throw new Error('[Pro Db Plus] -  Database URL was not provided');
+        mongoose.set('strictQuery', true);
+      
+        mongoose.connect(db, {
+            useNewUrlParser: true,
+            useUnifiedTopology: true
+        });
+    
+    
+        if (options.notify === false) return;
+        else return  console.log(bold.blue('[ Xp Database  Conected ]'));
+        
+    }
+
+    async  addMon(data, value) {
+        try {
+          const newData = {
+            data: data,
+            value:value ,
+            createdAt: new Date(),
+          };
+
+          const document = new MyModel(newData);
+          await document.save(); 
+      
+          return  true;
+        } catch (error) {
+          console.error('Error saving data:', error);
+           return  false; 
+        }
+      }
+
+      async  getMon(data) {
+        try {
+          const result = await MyModel.findOne({ data: data });
+          return result ? result : "No Data";
+        } catch (error) {
+          console.error("Database error:", error);
+          throw error; 
+        }
+      }
+
+      async  deleteOneMon(data) {
+        try {
+          const result = await MyModel.deleteOne({ data: data });
+          return result ? result : "err";
+        } catch (error) {
+          console.error("Database error:", error);
+          throw error; 
+        }
+      }
+
+      async  deleteAllMon() {
+        try {
+          const result = await MyModel.deleteMany();
+          return result ? result : "err";
+        } catch (error) {
+          console.error("Database error:", error);
+          throw error; 
+        }
+      }
+      
 }
 module.exports.DB = Data
